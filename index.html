@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="AUTO PROMO - anunțuri și promovare auto">
+  <title>AUTO PROMO</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span>AUTO</span> PROMO</a>
+    <nav><a href="#anunturi">Anunțuri</a><a href="#despre">Despre</a></nav>
+    <a class="button small" href="#publica">Publică anunț</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">PLATFORMA TA AUTO</p>
+        <h1>Mașina ta merită<br><span>să fie văzută.</span></h1>
+        <p>Descoperă mașini interesante sau promovează-ți propriul anunț pe AUTO PROMO.</p>
+        <a class="button" href="#publica">Adaugă un anunț</a>
+      </div>
+    </section>
+
+    <section class="section" id="anunturi">
+      <div class="section-heading">
+        <div><p class="eyebrow">DESCOPERĂ</p><h2>Mașini promovate</h2></div>
+        <input id="search" type="search" placeholder="Caută marcă sau model...">
+      </div>
+      <div class="cars" id="cars">
+        <article class="car-card" data-search="volkswagen golf gti">
+          <div class="car-art golf">GTI</div>
+          <div class="car-info"><p class="tag">PROMOVAT</p><h3>Volkswagen Golf 5 GTI</h3><p>2007 · Benzină · Manuală</p><strong>5.500 €</strong></div>
+        </article>
+        <article class="car-card" data-search="bmw seria 3">
+          <div class="car-art bmw">BMW</div>
+          <div class="car-info"><p class="tag">PROMOVAT</p><h3>BMW Seria 3</h3><p>2012 · Diesel · Automată</p><strong>8.900 €</strong></div>
+        </article>
+        <article class="car-card" data-search="audi a4">
+          <div class="car-art audi">AUDI</div>
+          <div class="car-info"><p class="tag">NOU</p><h3>Audi A4</h3><p>2015 · Diesel · Manuală</p><strong>10.200 €</strong></div>
+        </article>
+      </div>
+      <p class="notice">Acestea sunt anunțuri demonstrative. Nu reprezintă oferte reale.</p>
+    </section>
+
+    <section class="section publish" id="publica">
+      <p class="eyebrow">VINDE MAI UȘOR</p>
+      <h2>Publică un anunț</h2>
+      <p>Completează formularul demonstrativ de mai jos.</p>
+      <form id="listing-form">
+        <label>Marcă și model<input required name="car" placeholder="Ex.: Volkswagen Golf"></label>
+        <div class="form-row">
+          <label>Preț (€)<input required type="number" min="0" name="price" placeholder="5500"></label>
+          <label>An fabricație<input type="number" min="1950" max="2035" name="year" placeholder="2007"></label>
+        </div>
+        <label>Descriere<textarea name="description" rows="3" placeholder="Descrie mașina..."></textarea></label>
+        <button class="button" type="submit">Trimite anunțul</button>
+        <p id="form-message" class="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="section about" id="despre">
+      <p class="eyebrow">DESPRE AUTO PROMO</p>
+      <h2>Mai multă vizibilitate pentru mașina ta.</h2>
+      <p>Un proiect dedicat promovării anunțurilor auto. În această versiune, conținutul este demonstrativ și formularul nu trimite date către un server.</p>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#"><span>AUTO</span> PROMO</a><p>© 2026 AUTO PROMO · Proiect demonstrativ</p></footer>
+  <script src="app.js"></script>
+</body>
+</html>
